@@ -1,7 +1,7 @@
 from pathlib import Path
 import json
 
-DATA_DIR = path(__file__).resolve().parent / "data"
+DATA_DIR = Path(__file__).resolve().parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
 DB_PATH = DATA_DIR / "leads.json"
 
@@ -14,4 +14,5 @@ def read_leads():
     except json.JSONDecodeError:
         return []
 
-print(read_leads())
+if __name__ == "__main__":
+    print(read_leads())
