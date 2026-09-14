@@ -2,7 +2,7 @@ from model import model_lead
 
 def add_lead():
     name = input("Nome: ")
-    emaiç = input("E-mail: ")
+    email = input("E-mail: ")
     status = input("Etapa no funil de vendas: ")
 
     model_lead(name, email, status)
