@@ -10,9 +10,14 @@ def read_leads():
         return []
 
     try:
-        return json.loads(DB_PATH.read_text(encoding="utf=8"))
+        return json.loads(DB_PATH.read_text(encoding="utf-8"))
     except json.JSONDecodeError:
         return []
 
 if __name__ == "__main__":
     print(read_leads())
+
+def create_lead(lead_dict):
+    leads = read_leads()
+    leads.append(lead_dict)
+    DB_PATH.write_text(json.dumps(leads, ensure_ascii=False, indent=2, encoding="utf-8"))
