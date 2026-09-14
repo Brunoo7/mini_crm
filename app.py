@@ -1,4 +1,8 @@
 def add_lead():
+    name = input("Nome: ")
+    emaiç = input("E-mail: ")
+    status = input("Etapa no funil de vendas: ")
+
     print("Lead adicionado (func)")
 
 
@@ -13,7 +17,7 @@ def main():
         opt = input("Escolha uma opção")
 
         if opt == "1":
-            print("Lead adicionado")
+            add_lead()
         elif opt == "2":
             print("Listar leads")
         elif opt == "0":
