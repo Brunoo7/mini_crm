@@ -1,7 +1,11 @@
+from model import model_lead
+
 def add_lead():
     name = input("Nome: ")
     emaiç = input("E-mail: ")
     status = input("Etapa no funil de vendas: ")
+
+    model_lead(name, email, status)
 
     print("Lead adicionado (func)")
 
@@ -14,7 +18,7 @@ def main():
         print("[2] Listar leads")
         print("[3] Sair do programa")
 
-        opt = input("Escolha uma opção")
+        opt = input("Escolha uma opção: ")
 
         if opt == "1":
             add_lead()
